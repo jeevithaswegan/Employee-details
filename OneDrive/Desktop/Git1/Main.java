@@ -5,14 +5,13 @@ class Employee {
     String empName;
     double[] monthlySalary = new double[3];
 
-    // Constructor
     Employee(int empId, String empName, double[] monthlySalary) {
         this.empId = empId;
         this.empName = empName;
         this.monthlySalary = monthlySalary;
     }
 
-    // Calculate Total Salary
+    
     double calculateTotalSalary() {
         double total = 0;
         for (double salary : monthlySalary) {
@@ -21,12 +20,12 @@ class Employee {
         return total;
     }
 
-    // Calculate Average Salary
+    
     double calculateAverageSalary() {
         return calculateTotalSalary() / monthlySalary.length;
     }
 
-    // Count Vowels in Employee Name
+    
     int countVowels() {
         int count = 0;
         String name = empName.toLowerCase();
@@ -42,7 +41,7 @@ class Employee {
         return count;
     }
 
-    // Reverse Employee Name
+   
     String reverseName() {
         String reversed = "";
         for (int i = empName.length() - 1; i >= 0; i--) {
@@ -51,7 +50,7 @@ class Employee {
         return reversed;
     }
 
-    // Display Employee Details
+    
     void displayDetails() {
         System.out.println("\nEmployee ID : " + empId);
         System.out.println("Employee Name : " + empName);
